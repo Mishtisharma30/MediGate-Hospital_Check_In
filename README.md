@@ -178,17 +178,12 @@ python hospital_admin\hospital_admin_.py -u <username> -p <password>
 
 ---
 
-# Key Backend Concepts
+# Known Limitations
 
-- Flask Routing
-- REST-style request handling
-- File Upload Handling
-- Face Encoding Generation
-- Face Matching
-- MySQL CRUD Operations
-- Session Management
-- Authentication
-- Input Validation
+- Passwords stored as plaintext — admin account passwords in the accounts table are not hashed. A production system must use bcrypt or argon2.
+- Single-threaded dev server — app.run(debug=True) is Flask's development server and is not suitable for concurrent users. Production deployment would require Gunicorn.
+- Three separate apps — registration, check-in, and admin run as independent Flask processes. A cleaner architecture would merge them using Flask Blueprints with a single    entry point.
+- No face liveness detection — the system cannot distinguish a real face from a photograph of a face held up to the camera.
 
 ---
 
