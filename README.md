@@ -5,8 +5,6 @@ A Flask and MySQL based backend application for hospital patient registration, c
 
 The system allows patients to register with their personal details and facial data. During hospital visits, patients can check in using facial recognition, while administrators can securely manage patient records through a dedicated dashboard.
 
-> **Note:** This repository focuses on the backend implementation. The HTML/CSS templates used for the user interface are pre-built templates and are included only for demonstrating backend functionality.
-
 ---
 
 # Features
